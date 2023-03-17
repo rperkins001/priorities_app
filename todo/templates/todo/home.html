@@ -1,0 +1,12 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h2>Welcome to the Todo List app!</h2>
+    {% if user.is_authenticated %}
+        <p>You are logged in as {{ user.username }}.</p>
+    {% else %}
+        <p>Please log in or register to use the app.</p>
+    {% endif %}
+{% endblock %}
